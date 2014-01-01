@@ -1,7 +1,9 @@
 /**
  * Analyze the relations of classes and ids in an HTML document.
  * Uses D3.js for visualization.
- * (c) 2013 by Martin Giger
+ *
+ * Licensed under the MIT License
+ * (c) 2014 by Martin Giger
  */
 
 function graphData() {
