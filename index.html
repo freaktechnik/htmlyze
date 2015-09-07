@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style>    
+<style>
 
 body, html {
     padding: 0;
@@ -8,7 +8,7 @@ body, html {
     height: 100%;
     overflow: hidden;
 }
-    
+
 .node text {
   font: 10px sans-serif;
   cursor: default;
@@ -26,8 +26,11 @@ body, html {
 <script src="loadfile.js"></script>
 <script>
 window.onload = function() {
-    var gd = new graphData();
-    
+    var gd = new graphData({
+        width: document.body.clientWidth,
+        height: document.body.clientHeight - document.getElementById("control").scrollHeight
+    });
+
     document.getElementById("addFile").addEventListener("click", function() {
         gd.update(window.prompt("URL:"));
     });

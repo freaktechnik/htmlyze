@@ -6,7 +6,7 @@
  * (c) 2014 by Martin Giger
  */
 
-function graphData() {
+function graphData({height, width}) {
     this.nodes = [];
     this.links = [];
     this.currentIDNumber = this.classGroup;
@@ -14,9 +14,7 @@ function graphData() {
 
     // setup graph
 
-    var width = document.body.clientWidth,
-        height = document.body.clientHeight - document.getElementById("control").scrollHeight,
-        that = this;
+    var that = this;
 
     this.svg = d3.select("body").append("svg")
         .attr("width", width)
