@@ -115,10 +115,11 @@ graphData.prototype.setDom = function(dom) {
       .attr("class", "node")
       .call(this.force.drag);
 
+    var that = this;
     node.append("text")
       .attr("dx", 2)
       .attr("dy", ".35em")
-      .style("fill", function(d) { return this.color(d.group); })
+      .style("fill", function(d) { return that.color(d.group); })
       .text(function(d) { return (d.group==1?'.':'#')+d.name });
 };
 
