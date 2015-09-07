@@ -104,13 +104,13 @@ graphData.prototype.setDom = function(dom) {
       .start();
 
     var link = this.svg.selectAll(".link")
-      .data(that.links)
+      .data(this.links)
     .enter().append("line")
       .attr("class", "link")
       .style("stroke-width", function(d) { return Math.sqrt(d.value); });
 
     var node = this.svg.selectAll(".node")
-      .data(that.nodes)
+      .data(this.nodes)
     .enter().append("g")
       .attr("class", "node")
       .call(this.force.drag);
